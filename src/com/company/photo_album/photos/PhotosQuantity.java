@@ -1,21 +1,22 @@
-package com.company.house.houseClases;
+package com.company.photo_album.photos;
 
 import java.util.Objects;
 
-public abstract class HouseStructure {
+public abstract class PhotosQuantity {
     //region Propertys
+
     private int quantity;
+
     //endregion
 
     //region Constructors
 
-    public HouseStructure(int quantity) {
+    public PhotosQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public HouseStructure() {
+    public PhotosQuantity() {
     }
-
     //endregion
 
     //region Getter and Setter
@@ -27,7 +28,9 @@ public abstract class HouseStructure {
     public void setQuantity(int quantity) {
         if (quantity > 0) {
             this.quantity = quantity;
-        } else throw new RuntimeException("The house have not doors or windows");
+        } else {
+            System.out.println("The photoalbum have not any phothos");
+        }
     }
 
     //endregion
@@ -38,7 +41,7 @@ public abstract class HouseStructure {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        HouseStructure that = (HouseStructure) o;
+        PhotosQuantity that = (PhotosQuantity) o;
         return quantity == that.quantity;
     }
 
@@ -49,11 +52,10 @@ public abstract class HouseStructure {
 
     @Override
     public String toString() {
-        return "HouseStructure{" +
+        return "PhotosQuantity{" +
                 "quantity=" + quantity +
                 '}';
     }
 
     //endregion
 }
-
