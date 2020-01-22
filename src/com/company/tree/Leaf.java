@@ -1,30 +1,24 @@
-package com.company.rose.petal_and_bud;
+package com.company.tree;
 
 import java.util.Objects;
 
-public class Petal extends RoseQuantity {
+public class Leaf {
     //region Propertys
 
     private String color;
-    private double petalSize;
+    private int leafSize;
 
     //endregion
 
     //region Constructors
 
-    public Petal(int quantity, int roseQuantity, String color, double petalSize) {
-        super(quantity, roseQuantity);
+    public Leaf(String color, int leafSize) {
         this.color = color;
-        this.petalSize = petalSize;
+        this.leafSize = leafSize;
     }
 
-    public Petal() {
+    public Leaf() {
     }
-
-    //endregion
-
-    //region Public Methods
-
     //endregion
 
     //region Getter and Setter
@@ -37,12 +31,12 @@ public class Petal extends RoseQuantity {
         this.color = color;
     }
 
-    public double getPetalSize() {
-        return petalSize;
+    public int getLeafSize() {
+        return leafSize;
     }
 
-    public void setPetalSize(double petalSize) {
-        this.petalSize = petalSize;
+    public void setLeafSize(int leafSize) {
+        this.leafSize = leafSize;
     }
 
     //endregion
@@ -53,21 +47,21 @@ public class Petal extends RoseQuantity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Petal petal = (Petal) o;
-        return Double.compare(petal.petalSize, petalSize) == 0 &&
-                Objects.equals(color, petal.color);
+        Leaf leaf = (Leaf) o;
+        return leafSize == leaf.leafSize &&
+                Objects.equals(color, leaf.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(color, petalSize);
+        return Objects.hash(color, leafSize);
     }
 
     @Override
     public String toString() {
-        return "Petal{" +
+        return "Leaf{" +
                 "color='" + color + '\'' +
-                ", petalSize=" + petalSize +
+                ", leafSize=" + leafSize +
                 '}';
     }
 
