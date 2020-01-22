@@ -33,9 +33,9 @@ public class PhotoAlbum implements MakePhotoAlbum, Printable {
     //region Public Methods
 
     @Override
-    public ArrayList<Photo> addPhoto() {
+    public void addPhoto() {
         photoAlbum = new ArrayList<>();
-        Photo photo1 = new Photo("Sunshine", "Arman");
+        Photo photo1 = new Photo("Sunshine", "David");
         Photo photo2 = new Photo("Lady", "Sergey");
         Photo photo3 = new Photo("Fish and man", "Paul");
         Photo photo4 = new Photo("Moon", "Leo");
@@ -47,7 +47,6 @@ public class PhotoAlbum implements MakePhotoAlbum, Printable {
         photoAlbum.add(photo4);
         photoAlbum.add(photo5);
         photoAlbum.add(photo6);
-        return photoAlbum;
     }
 
     @Override

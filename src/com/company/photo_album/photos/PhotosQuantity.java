@@ -11,6 +11,7 @@ public abstract class PhotosQuantity {
 
     //region Constructors
 
+
     public PhotosQuantity(int quantity) {
         this.quantity = quantity;
     }
