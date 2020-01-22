@@ -1,13 +1,14 @@
 package com.company;
 
-import com.company.photo_album.PhotoAlbum;
+import com.company.dog.Dog;
 
 public class Main {
 
     public static void main(String[] args) {
-        PhotoAlbum photoAlbum = new PhotoAlbum("The nice World Earth");
-        photoAlbum.addPhoto();
-        photoAlbum.giveNameToPhotoByIndex();
-        photoAlbum.printQuantityOfPhothos();
+        Dog dog = new Dog(4.5, "Reks", "Tibetien Mastif", "GAF-GAF");
+
+        dog.printName();
+        dog.bark();
+        dog.giveBirthToOffspring();
     }
 }
